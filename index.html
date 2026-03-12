@@ -16,10 +16,16 @@
             --text-main: #2b2b2b;
             --text-muted: #6b6b6b;
             --border: #e2e0db;
+            /* Added a slightly darker color for the subtle dots */
+            --dot-color: #d8d5ce; 
         }
 
         body {
             background-color: var(--bg);
+            /* This creates the elegant dot grid pattern */
+            background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+            background-size: 24px 24px;
+            
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             line-height: 1.8;
@@ -44,7 +50,9 @@
             max-width: 650px;
             margin: 0 auto;
             padding: 15vh 2rem 10vh 2rem;
-            animation: fadeUp 0.8s ease-out forwards; /* Applies the animation */
+            animation: fadeUp 0.8s ease-out forwards;
+            /* Added a subtle glow behind the text to ensure it remains perfectly readable over the dots */
+            background: radial-gradient(circle at center, var(--bg) 0%, transparent 100%);
         }
 
         h1, h2, h3 {
