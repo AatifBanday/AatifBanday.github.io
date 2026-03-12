@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aatif | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --text-main: #2b2b2b;
+            --text-muted: #6b6b6b;
+            --border: #e2e0db;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 15vh 2rem 10vh 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: var(--text-main);
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+            font-weight: 300;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience Grid */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .timeline {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--text-main);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .wrapper {
+                padding-top: 10vh;
+            }
+            .experience-header {
+                flex-direction: column;
+            }
+            .links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Aatif</h1>
+            <div class="title">Computer Science & Systems Architecture</div>
+        </header>
+
+        <section id="summary">
+            <h2>Overview</h2>
+            <p>
+                Based in Mississauga, I am a technologist driven by a deep fascination with how complex systems operate under the hood. Bridging academic rigor with hands-on deployment, my focus lies at the intersection of computer architecture, cloud infrastructure, and low-level system design.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience & Education</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="role">Bachelor of Science, Computer Science</div>
+                    <div class="timeline">2026 — Present</div>
+                </div>
+                <div class="tech-stack">BITS Pilani</div>
+                <p style="font-size: 0.95rem; margin-top: 0.5rem;">
+                    Currently expanding my theoretical and practical foundation in software engineering, with an intended specialization in Computing Systems to deeply understand system-level operations.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="role">Computer Science Diploma</div>
+                    <div class="timeline">Completed 2026</div>
+                </div>
+                <div class="tech-stack">Sheridan College</div>
+                <p style="font-size: 0.95rem; margin-top: 0.5rem;">
+                    Completed an intensive two-year program focusing on core programming methodologies, logic, and application development.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="role">Systems & Cloud Environments</div>
+                    <div class="timeline">Independent Focus</div>
+                </div>
+                <div class="tech-stack">Linux (Ubuntu), AWS</div>
+                <p style="font-size: 0.95rem; margin-top: 0.5rem;">
+                    Actively architecting and managing environments within the AWS ecosystem and mastering Linux distributions to build resilient, scalable computing infrastructure.
+                </p>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Career Goals</h2>
+            <p>
+                My immediate objective is to integrate into a forward-thinking technical team in Canada, translating my academic foundation into hands-on, high-impact work experience. 
+            </p>
+            <p>
+                Long-term, I am driving toward a specialization in <strong>System Security</strong>. My goal is to not only build and administer cloud and physical architectures but to rigorously safeguard the low-level systems that power modern computing.
+            </p>
+        </section>
+
+        <div class="links">
+            <a href="resume.pdf" target="_blank">View Résumé</a>
+            <a href="mailto:your.email@example.com">Contact Me</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+</body>
+</html>
